@@ -1,4 +1,15 @@
-# sql-cart
-Node + Sequelize App - the code isn't mine, it's from the Maximilian Schwarzmuller's udemy course!
+## Important Note!
 
-util/database.js is missing! Create sequelize connection before starting
+util/database.js is missing! Create this file before starting
+
+**util/database.js example:**
+```
+const Sequelize = require("sequelize");
+
+const sequelize = new Sequelize("<database-name>", "root", "<database-password>", {
+  dialect: "mysql",
+  host: "localhost",
+});
+
+module.exports = sequelize;
+```
